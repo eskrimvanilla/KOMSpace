@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Itim", cursive;
+}
+
+body {
+    min-height: 100vh;
+    justify-content: center;
+    background: rgb(10, 5, 59) !important;
+}
+
+
+/* room card */
+.card-room > .card, .card > img{
+    border-radius: 20px !important;
+}
+.card-icon .material-symbols-outlined.icn {
+    font-size: 0; /* Initially hide the icon */
+    color: #000000; /* Default color */
+    transition: transform 0.4s ease; /* Smooth transition */
+    transform: translateX(-100%) scale(1); /* Initially move the icon outside the card */
+}
+
+.card-room:hover .card-icon .material-symbols-outlined.icn {
+    font-size: 24px; /* Show the icon on hover */
+    transform: translateX(0) scale(1); /* Move the icon to its original position and keep the scale at 1 */
+}
+
+.card-icon.clicked .material-symbols-outlined.icn {
+    transform: translateX(0) scale(1.5); /* Zoom in the icon when clicked by increasing the scale */
+}
+
+
+/* nav */
+.navbar .tulisan {
+    padding-left: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    --bs-bg-opacity: 1;
+    background-color: rgba(88, 76, 200, 1) !important;
+}
+
+.navbar .tulisan ul {
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0 20px 0 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.navbar {
+    padding: 0% !important;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px;
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+h1.logo span {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: bold;
+}
+
+h1.text {
+    position: relative;
+    font-size: 38px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+/* dashboard */
+.availability {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 17.5px 17.5px rgba(17, 17, 17, 1);
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.availability:hover {
+    box-shadow: 17.5px 17.5px #3D3737;
+    transform: scale(1.05);
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+
+/* button */
+.btn {
+    background-color: #584CC8 !important;
+    border: #584CC8 !important;
+    border-radius: 50px !important;
+    font-family: "Itim", cursive !important;
+    color: white !important;
+    font-weight: 400 !important;
+}
+
+.opsi {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 2px 4px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 2px 2px 0px rgb(37, 37, 37);
+}
+
+.edit:hover, .delete:hover{
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+.edit{
+    background-color: #149ed9;
+}
+
+.delete{
+    background-color: red;
+}
+.edit span, .text-edit, .delete span{
+    color: white;
+}
+
+iconify-icon{
+    color: white;
+    align-items: center;
+    vertical-align: baseline;
+}
+
+.btn:hover {
+    background-color: #867ca7 !important;
+    border: #584CC8 !important;
+    border-radius: 50px !important;
+}
+
+/* form */
+.tab-heading th {
+    color: white !important;
+    padding: 10px 15px 10px 15px !important;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.modal-header {
+    justify-content: center;
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+}
+
+.modal-header h1 {
+    font-size: 30px !important;
+}
+
+.modal-content{
+    border-radius: 35px;
+    box-shadow: 20px 20px rgba(61,55,55, 1) !important;
+}
+
+label.form-label {
+    font-size: 19px;
+}
+
+.status {
+    margin-right: 5px;
+    justify-content: first baseline;
+    width: 30px;
+    height: 30px;
+}
+
+::selection{
+    background: #9295E0;
+    color: #fff;
+}
+
+.wrapper:not(.title){
+    display: grid;
+    /* place-items: center; */
+    overflow: hidden;
+    max-width: 1300px;
+    background: rgb(10,5,59);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+    margin: auto !important;
+}
+
+.wrapper .title-text{
+    display: flex;
+    width: 200%;
+}
+
+.wrapper .title{
+    width: 50%;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.wrapper .slide-controls{
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 30px 0 10px 0;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+
+.slide-controls .slide{
+    height: 100%;
+    width: 100%;
+    color: #fff !important;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    border: 1px solid lightsteelblue;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+.slide-controls label.ruangan{
+    color: #000;
+}
+  
+.slide-controls .slider-tab{
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(left, #aca8d9, #584CC8) !important;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55) !important;
+}
+
+input[type="radio"]{
+    display: none !important;
+}
+
+#barang:checked ~ .slider-tab{
+    left: 50% !important;
+}
+#barang:checked ~ label.barang{
+    color: #fff !important;
+    cursor: default;
+    user-select: none;
+}
+
+#login:checked ~ label.ruangan{
+    cursor: default;
+    user-select: none;
+}
+
+.wrapper .form-container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .form-inner{
+    display: flex;
+    width: 200%;
+}
+
+.form-container .form-inner section:not(.table){
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+
+.form-inner section .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+.form-inner section .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid lightgrey;
+    border-bottom-width: 2px;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.form-inner section .field input::placeholder{
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+form .field input:focus::placeholder{
+    color: #b3b3b3;
+}
+
+section .butn{
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+section .butn .butn-layer{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    background: -webkit-linear-gradient(right, #aca8d9, #584CC8, #aca8d9, #584CC8);
+    border-radius: 5px;
+    transition: all 0.4s ease;;
+}
+
+section .butn:hover .butn-layer{
+    left: 0;
+}
+
+section .butn input[type="submit"]{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+    padding-left: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.butn {
+    position: relative;
+    overflow: hidden;
+}
+
+/* .butn .butn-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.butn .btn {
+    position: relative;
+    z-index: 2;
+} */
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+    color: #fff !important;
+    background-color: #9295E0;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+    color: #fff !important;
+    background-color: #B5B7DE;
+}
